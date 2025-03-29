@@ -1,0 +1,168 @@
+/* Default Light Theme */
+body[data-theme="light"] {
+  background: linear-gradient(to bottom, #87CEEB, #4682B4);
+  color: #333;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Card Styles */
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* background-image: url(https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg?cs=srgb&dl=pexels-brett-sayles-912364.jpg&fm=jpg); */
+  /* background-size: contain; */
+  /* background-size: 100% 100%; */
+
+  color: black;
+  font-weight: bold; /* Makes text bold */
+  font-size: 18px; /* Adjust font size */
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body[data-theme="dark"] .card {
+  background-color: rgba(50, 50, 50, 0.9);
+  color: white;
+}
+
+/* Button Styling */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/* Forecast boxes styling */
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.forecast-box {
+  width: 18%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+
+.forecast-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme="dark"] .forecast-box {
+  background-color: rgba(50, 50, 50, 0.9);
+  color: white;
+}
+
+body[data-theme="dark"] .forecast-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.15);
+}
+
+/* Weather icon */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom, #87CEEB, #4682B4);
+  border-radius: 20%;
+}
+
+/* Make the website mobile-friendly */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .forecast-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forecast-box {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+}
+
+
+/* refresh button */
+/* Refresh Button Styles */
+.btn-secondary {
+  background-color: grey;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%; /* Full width on small screens */
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: grey;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .btn-secondary {
+    width: auto; /* Normal size on larger screens */
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-secondary {
+    padding: 12px; /* Bigger touch area for mobile */
+    font-size: 14px;
+  }
+}
+
