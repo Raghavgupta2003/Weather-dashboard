@@ -1,4 +1,5 @@
 # Weather Dashboard Web App
+https://weather-dashboard-woad-beta.vercel.app/
 
 ## Overview
 The **Weather Dashboard Web App** is a React-based application that allows users to search for real-time weather updates and a 5-day weather forecast for any city using the OpenWeatherMap API. The app provides a clean and user-friendly interface with error handling, loading indicators, and dynamic background updates.
@@ -47,14 +48,20 @@ weather-dashboard/
 ├── public/
 ├── src/
 │   ├── components/
+│   │   ├── ErrorMessage.js
+│   │   ├── Loader.css
+│   │   ├── Loader.js
+│   │   ├── SearchBar.js
+│   │   ├── WeatherCard.js
+│   ├── context/
+│   │   ├── ThemeContext.js
+│   ├── pages/
 │   │   ├── Home.js
-|   |   ├── Home.css
+│   │   ├── Home.css
 │   ├── services/
 │   │   ├── weatherService.js
 │   ├── utils/
 │   │   ├── processForecast.js
-│   ├── styles/
-│   │   ├── Home.css
 │   ├── App.js
 │   ├── index.js
 ├── package.json
